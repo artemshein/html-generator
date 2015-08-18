@@ -1,5 +1,6 @@
 package j2html.tags;
 
+import j2html.TagCreator;
 import j2html.attributes.Attr;
 
 import java.util.ArrayList;
@@ -87,6 +88,16 @@ public class ContainerTag extends Tag {
      */
     public ContainerTag withText(String text) {
         return with(new Text(text));
+    }
+
+    /**
+     * Appends an unsafe HTML to this element
+     * @param text HTML
+     * @return itself for easy chaining
+     */
+    public ContainerTag withUnsafeText(String text)
+    {
+        return with(TagCreator.unsafeHtml(text));
     }
 
     /**
