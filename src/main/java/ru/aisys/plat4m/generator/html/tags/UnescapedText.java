@@ -1,4 +1,4 @@
-package j2html.tags;
+package ru.aisys.plat4m.generator.html.tags;
 
 public class UnescapedText extends Tag {
 

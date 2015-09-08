@@ -1,6 +1,6 @@
-package j2html.attributes;
+package ru.aisys.plat4m.generator.html.attributes;
 
-import j2html.tags.ContainerTag;
+import ru.aisys.plat4m.generator.html.tags.ContainerTag;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;

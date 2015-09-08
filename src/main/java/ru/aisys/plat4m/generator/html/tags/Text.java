@@ -1,4 +1,4 @@
-package j2html.tags;
+package ru.aisys.plat4m.generator.html.tags;
 
 
 import org.apache.commons.lang3.StringEscapeUtils;

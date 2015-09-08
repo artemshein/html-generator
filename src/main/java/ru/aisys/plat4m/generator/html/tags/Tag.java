@@ -1,6 +1,7 @@
-package j2html.tags;
+package ru.aisys.plat4m.generator.html.tags;
 
-import j2html.attributes.Attribute;
+import org.jetbrains.annotations.NotNull;
+import ru.aisys.plat4m.generator.html.attributes.Attribute;
 
 import java.util.ArrayList;
 
@@ -38,6 +39,13 @@ public abstract class Tag {
         return attributes.add(new Attribute(name, value));
     }
 
+    @NotNull
+    public Tag attr(@NotNull Attribute attr)
+    {
+        attributes.add(attr);
+        return this;
+    }
+
     public String render() {
         return renderOpenTag() + renderCloseTag();
     }
@@ -61,4 +69,13 @@ public abstract class Tag {
         return "</" + tag + ">";
     }
 
+    @NotNull
+    public Tag attrs(@NotNull Attribute... attrs)
+    {
+        for (Attribute attr : attrs)
+        {
+            attributes.add(attr);
+        }
+        return this;
+    }
 }

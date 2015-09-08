@@ -1,7 +1,9 @@
-package j2html.tags;
+package ru.aisys.plat4m.generator.html.tags;
 
-import j2html.TagCreator;
-import j2html.attributes.Attr;
+import org.jetbrains.annotations.NotNull;
+import ru.aisys.plat4m.generator.html.TagCreator;
+import ru.aisys.plat4m.generator.html.attributes.Attr;
+import ru.aisys.plat4m.generator.html.attributes.Attribute;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -109,6 +111,12 @@ public class ContainerTag extends Tag {
      */
     public ContainerTag attr(String attribute, String value) {
         setAttribute(attribute, value);
+        return this;
+    }
+
+    public ContainerTag attrs(@NotNull Attribute... attrs)
+    {
+        super.attrs(attrs);
         return this;
     }
 

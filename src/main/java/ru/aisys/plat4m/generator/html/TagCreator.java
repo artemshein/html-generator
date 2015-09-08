@@ -1,9 +1,9 @@
-package j2html;
+package ru.aisys.plat4m.generator.html;
 
-import j2html.tags.ContainerTag;
-import j2html.tags.EmptyTag;
-import j2html.tags.Text;
-import j2html.tags.UnescapedText;
+import org.jetbrains.annotations.NotNull;
+import ru.aisys.plat4m.generator.html.attributes.Attr;
+import ru.aisys.plat4m.generator.html.attributes.Attribute;
+import ru.aisys.plat4m.generator.html.tags.*;
 
 public class TagCreator {
 
@@ -167,4 +167,104 @@ public class TagCreator {
     public static ContainerTag var()                    { return new ContainerTag("var"); }
     public static ContainerTag video()                  { return new ContainerTag("video"); }
 
+    @NotNull
+    public static ContainerTag ul(@NotNull Tag... tag)
+    {
+        return ul().with(tag);
+    }
+
+    @NotNull
+    public static ContainerTag li(@NotNull Tag... tags)
+    {
+        return li().with(tags);
+    }
+
+    public static Attribute href(@NotNull String url)
+    {
+        return new Attribute(Attr.HREF, url);
+    }
+
+    @NotNull
+    public static ContainerTag a(@NotNull Attribute... attrs)
+    {
+        return a().attrs(attrs);
+    }
+
+    @NotNull
+    public static ContainerTag p(@NotNull Tag... tags)
+    {
+        return p().with(tags);
+    }
+
+    @NotNull
+    public static ContainerTag div(@NotNull Tag... tags)
+    {
+        return div().with(tags);
+    }
+
+    @NotNull
+    public static ContainerTag article(@NotNull Tag... tags)
+    {
+        return article().with(tags);
+    }
+
+    @NotNull
+    public static ContainerTag a(@NotNull Tag... tags)
+    {
+        return a().with(tags);
+    }
+
+    @NotNull
+    public static Attribute rel(@NotNull String rel)
+    {
+        return new Attribute(Attr.REL, rel);
+    }
+
+    @NotNull
+    public static EmptyTag link(@NotNull Attribute... attrs)
+    {
+        return link().attrs(attrs);
+    }
+
+    @NotNull
+    public static Attribute src(@NotNull String url)
+    {
+        return new Attribute(Attr.SRC, url);
+    }
+
+    @NotNull
+    public static ContainerTag script(@NotNull Attribute... attrs)
+    {
+        return script().attrs(attrs);
+    }
+
+    @NotNull
+    public static ContainerTag head(@NotNull Tag... tags)
+    {
+        return head().with(tags);
+    }
+
+    @NotNull
+    public static ContainerTag body(@NotNull Tag... tags)
+    {
+        return body().with(tags);
+    }
+
+    @NotNull
+    public static ContainerTag footer(@NotNull Tag... tags)
+    {
+        return footer().with(tags);
+    }
+
+    @NotNull
+    public static ContainerTag html(@NotNull Tag... tags)
+    {
+        return html().with(tags);
+    }
+
+    @NotNull
+    public static ContainerTag h2(@NotNull Tag... tags)
+    {
+        return h2().with(tags);
+    }
 }

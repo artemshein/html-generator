@@ -1,6 +1,6 @@
 package performancetester;
 
-import j2html.tags.ContainerTag;
+import ru.aisys.plat4m.generator.html.tags.ContainerTag;
 import org.junit.Test;
 
 import java.util.concurrent.TimeUnit;
@@ -8,7 +8,7 @@ import java.util.function.IntConsumer;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
-import static j2html.TagCreator.*;
+import static ru.aisys.plat4m.generator.html.TagCreator.*;
 import static org.junit.Assert.assertEquals;
 
 public class RenderSpeed {

@@ -1,4 +1,4 @@
-package j2html.attributes;
+package ru.aisys.plat4m.generator.html.attributes;
 
 public class Attr {
     public static String HIDDEN = "hidden";

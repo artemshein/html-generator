@@ -1,4 +1,4 @@
-package j2html.attributes;
+package ru.aisys.plat4m.generator.html.attributes;
 
 import org.apache.commons.lang3.StringEscapeUtils;
 
@@ -29,6 +29,11 @@ public class Attribute {
 
     public String getName() {
         return name;
+    }
+
+    public String getValue()
+    {
+        return value;
     }
 
     public void setValue(String value) {

@@ -1,7 +1,8 @@
-package j2html.tags;
+package ru.aisys.plat4m.generator.html.tags;
 
-import j2html.attributes.Attr;
-import j2html.attributes.Attribute;
+import org.jetbrains.annotations.NotNull;
+import ru.aisys.plat4m.generator.html.attributes.Attr;
+import ru.aisys.plat4m.generator.html.attributes.Attribute;
 
 public class EmptyTag extends Tag {
 
@@ -18,6 +19,12 @@ public class EmptyTag extends Tag {
      */
     public EmptyTag attr(String attribute, String value) {
         setAttribute(attribute, value);
+        return this;
+    }
+
+    public EmptyTag attrs(@NotNull Attribute... attrs)
+    {
+        super.attrs(attrs);
         return this;
     }
 

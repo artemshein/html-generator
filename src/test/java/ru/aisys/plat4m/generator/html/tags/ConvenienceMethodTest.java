@@ -1,8 +1,8 @@
-package j2html.tags;
+package ru.aisys.plat4m.generator.html.tags;
 
 import org.junit.Test;
 
-import static j2html.TagCreator.*;
+import static ru.aisys.plat4m.generator.html.TagCreator.*;
 import static org.junit.Assert.assertEquals;
 
 public class ConvenienceMethodTest {
